@@ -7,7 +7,7 @@ function Landing() {
 
   return (
     <div className={style.container}>
-      <div className={style.paper}>
+      <div className={style.block}>
         <h3>App de perritos</h3>
         <hr></hr>
         <h5>Hecho por Juan Bautista</h5>

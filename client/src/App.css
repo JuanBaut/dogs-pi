@@ -15,23 +15,58 @@
   font-family: JetBrains Mono;
 }
 
-hr {
-  color: var(--primary);
-}
-
 body {
   font-weight: 400;
   background-color: var(--background);
 }
 
+input,
 button,
 h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
+  margin: 0;
+  padding: 8px;
   font-weight: 700;
   color: var(--text);
+}
+
+hr {
+  color: var(--primary);
+}
+
+input {
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+
+  border: 4px solid var(--primary);
+  border-radius: 4px;
+
+  width: fit-content;
+  transition: 0.25s ease-out;
+  transition: 0.25s ease-in;
+}
+
+button {
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+
+  border: 4px solid var(--primary);
+  border-radius: 4px;
+  margin: 0 12px 0 12px;
+
+  width: fit-content;
+  transition: 0.25s ease-out;
+  transition: 0.25s ease-in;
+}
+
+button:hover {
+  background-color: var(--accent);
 }
 
 html {
@@ -55,7 +90,8 @@ h4 {
 }
 
 h5,
-button {
+button,
+input {
   font-size: 1.333rem; /* 21.28px */
 }
 
