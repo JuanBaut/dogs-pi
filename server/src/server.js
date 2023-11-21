@@ -1,9 +1,8 @@
-import express from "express";
-import { urlencoded, json } from "body-parser";
-import morgan from "morgan";
-import routes from "./routes/index.js";
-
-import "./db.js";
+const express = require("express");
+const morgan = require("morgan");
+const router = require("./routes/router");
+const { urlencoded, json } = require("body-parser");
+const db = require("./db");
 
 const server = express();
 
@@ -24,7 +23,7 @@ server.use((req, res, next) => {
   next();
 });
 
-server.use("/", routes);
+server.use("/", router);
 
 // Error catching endware.
 server.use((err, req, res, next) => {
@@ -35,4 +34,4 @@ server.use((err, req, res, next) => {
   res.status(status).send(message);
 });
 
-export default server;
+module.export = server;
