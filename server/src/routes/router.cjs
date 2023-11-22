@@ -1,5 +1,5 @@
 const Router = require("express");
-const dogRouter = require("./dogRouter");
+const dogRouter = require("./dogRouter.cjs");
 
 const router = Router();
 

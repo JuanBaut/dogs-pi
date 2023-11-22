@@ -1,8 +1,8 @@
 const express = require("express");
 const morgan = require("morgan");
-const router = require("./routes/router");
+const router = require("./routes/router.cjs");
 const { urlencoded, json } = require("body-parser");
-const db = require("./db");
+const db = require("./db.cjs");
 
 const server = express();
 
@@ -27,7 +27,6 @@ server.use("/", router);
 
 // Error catching endware.
 server.use((err, req, res, next) => {
-  // eslint-disable-line no-unused-vars
   const status = err.status || 500;
   const message = err.message || err;
   console.error(err);
