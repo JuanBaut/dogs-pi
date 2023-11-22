@@ -1,5 +1,5 @@
 const server = require("./src/server.cjs");
-const { conn } = require("./src/db.cjs/index.js");
+const { conn } = require("./src/db.cjs");
 const PORT = 3001;
 
 conn
